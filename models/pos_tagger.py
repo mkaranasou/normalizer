@@ -1,11 +1,13 @@
 import json
-import nltk as nltk
+import nltk
+import nltk.data
+
 from utils.constants import C
 
 
 class BackoffTagger(nltk.TaggerI):
     def __init__(self):
-        self._taggers = [nltk.PerceptronTagger()]
+        self._taggers = [nltk.tag.DefaultTagger(None)]
 
 
 class POSTagger(object):
@@ -30,7 +32,6 @@ class POSTagger(object):
         self._custom_model_pos_tag()
         if len(self.tags_to_keep) > 0 or len(self.tags_to_remove) > 0:
             return self._filter_results()
-        print self.result
         return self.result
 
     def _filter_results(self):
@@ -70,6 +71,7 @@ class POSTagger(object):
             Proceedings of the International Conference on Recent Advances in Natural
             Language Processing.
         """
+        # default_tagger = nltk.data.load(nltk.tag._POS_TAGGER)
         tagger = nltk.tag.UnigramTagger(model=self.gate_custom_model, backoff=BackoffTagger())
         # if len(self.text_list) == 1:
         #     tagger = nltk.tag.UnigramTagger(model=train_model, backoff=default_tagger)

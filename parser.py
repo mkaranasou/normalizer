@@ -1,5 +1,8 @@
-import string
+import os
+import sys
+sys.path.extend([os.path.dirname(os.path.realpath(__file__))])
 
+import string
 from nltk import WordNetLemmatizer, re
 
 from models.pos_tagger import POSTagger
@@ -202,11 +205,11 @@ class Parser(object):
             temp = temp_word.split(' ')
 
         if len(temp) == 1:
-            # spell_checked = self.spell_checker.correct_word(temp[0])
-            # if not self.spell_checker.is_correct(temp[0]) and len(spell_checked) > 0 and temp[0] not in spell_checked:
-            if len([c for c in temp[0] if c.islower()]) == len(temp[0]):
+            is_correct = self.spell_checker.is_correct(temp[0])
+            # if len([c for c in temp[0] if c.islower()]) == len(temp[0]) or not is_correct:
+            if temp[0].islower() or temp[0].isupper() or not is_correct:
                 all_lower = True
-                temp = [x for x in self._split_all_lower(temp[0].lower())]  # tollcontrol
+                temp = [x for x in self._split_all_lower(temp[0].lower())]  # tollcontrol or Iscustomer
                 # print "after split", temp
 
         if pascal_or_camel_case or len(temp) >= 1 or all_lower:
@@ -226,3 +229,13 @@ class Parser(object):
 if __name__ == "__main__":
     parser = Parser(spellcheck=True, deploy_abbreviations=True)
     print parser.normalize("somename")
+    print parser.normalize("some_name")
+    print parser.normalize("someName")
+    print parser.normalize("SomeName")
+    print parser.normalize("SomeName123435")
+    print parser.normalize("s123435somename")
+    print parser.normalize("ClientName")
+    print parser.normalize("Iscustomer")
+
+    parser = Parser(spellcheck=True, deploy_abbreviations=False)
+    print parser.normalize("s123435somename")
