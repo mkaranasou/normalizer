@@ -49,9 +49,9 @@ class Parser(object):
                 self._deploy_abbreviations()
             self._remove_special_chars()
             if self.pos_tag:
-                self.proper_names = [v for k, v in self.pos_tagger.pos_tag(self.split_name)]
+                self.proper_names = [v for v in self.pos_tagger.pos_tag(self.split_str_seq)]
             else:
-                self.proper_names = self.split_name
+                self.proper_names = self.split_str_seq
         else:
             self.proper_names.append(self.str_seq)
 
@@ -87,7 +87,7 @@ class Parser(object):
     def _deploy_abbreviations(self):
         for each in self.split_str_seq:
             if each in self.abbreviations:
-                self.split_name[self.split_name.index(each)] = self.abbreviations[each]
+                self.split_str_seq[self.split_str_seq.index(each)] = self.abbreviations[each]
 
     def _split_all_lower(self, word):
         from math import log
@@ -129,12 +129,12 @@ class Parser(object):
             :return:
         """
 
-        for each in self.split_name:
+        for each in self.split_str_seq:
             clean = re.sub(r'\W|\d', '', each)
-            if len(clean) > 1 or len(self.split_name) == 1:
-                self.split_name[self.split_name.index(each)] = clean
+            if len(clean) > 1 or len(self.split_str_seq) == 1:
+                self.split_str_seq[self.split_str_seq.index(each)] = clean
             else:
-                self.split_name.remove(each)
+                self.split_str_seq.remove(each)
 
     @staticmethod
     def _is_plural(word):
@@ -150,7 +150,7 @@ class Parser(object):
         """
         # todo: check this out https://pypi.python.org/pypi/inflect
 
-        plurar_result = self.is_plural(word_plural)
+        plurar_result = self._is_plural(word_plural)
 
         if plurar_result[0]:
             return plurar_result[1]
@@ -210,7 +210,7 @@ class Parser(object):
                 # print "after split", temp
 
         if pascal_or_camel_case or len(temp) >= 1 or all_lower:
-            self.split_name = [a.lower() for a in temp]
+            self.split_str_seq = [a.lower() for a in temp]
             has_been_split = True
 
         return has_been_split

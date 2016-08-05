@@ -3,9 +3,17 @@ import nltk as nltk
 from utils.constants import C
 
 
+class BackoffTagger(nltk.TaggerI):
+    def __init__(self):
+        self._taggers = [nltk.PerceptronTagger()]
+
+
 class POSTagger(object):
     """
-
+        Part of speech tagger. Uses a custom model and nltk to build
+        a custom pos tagger that works well on short informal phrases.
+        @tags_to_keep:
+        @tags_to_remove:
     """
     def __init__(self, tags_to_keep=None, tags_to_remove=None):
         self.tags_to_keep = tags_to_keep if isinstance(tags_to_keep, list) else []
@@ -22,6 +30,7 @@ class POSTagger(object):
         self._custom_model_pos_tag()
         if len(self.tags_to_keep) > 0 or len(self.tags_to_remove) > 0:
             return self._filter_results()
+        print self.result
         return self.result
 
     def _filter_results(self):
@@ -61,8 +70,7 @@ class POSTagger(object):
             Proceedings of the International Conference on Recent Advances in Natural
             Language Processing.
         """
-        tagger = nltk.tag.UnigramTagger(model=self.gate_custom_model,
-                                        backoff=nltk.data.load(nltk.tag._POS_TAGGER))
+        tagger = nltk.tag.UnigramTagger(model=self.gate_custom_model, backoff=BackoffTagger())
         # if len(self.text_list) == 1:
         #     tagger = nltk.tag.UnigramTagger(model=train_model, backoff=default_tagger)
         # elif len(self.text_list) == 2:
