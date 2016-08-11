@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fb04131-15ca-4dfc-b370-1013bf3d0f24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/parser_tests.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/word-normalizer.iml" afterPath="$PROJECT_DIR$/.idea/word_normalizer.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/parser.py" afterPath="$PROJECT_DIR$/parser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/pos_tagger.py" afterPath="$PROJECT_DIR$/models/pos_tagger.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/enums.py" afterPath="$PROJECT_DIR$/utils/enums.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser.py" afterPath="$PROJECT_DIR$/parser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/parser_tests.py" afterPath="$PROJECT_DIR$/tests/parser_tests.py" />
     </list>
     <ignored path="word-normalizer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,6 +19,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/word-normalizer$parser__1_.coverage" NAME="parser (1) Coverage Results" MODIFIED="1470400147525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/word_normalizer$parser__1_.coverage" NAME="parser (1) Coverage Results" MODIFIED="1470927487014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/word-normalizer$Unittest_ParserTests_test.coverage" NAME="Unittest ParserTests.test Coverage Results" MODIFIED="1470401904761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/word-normalizer$parser.coverage" NAME="parser Coverage Results" MODIFIED="1470399256001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/word_normalizer$Unittest_ParserTests_test.coverage" NAME="Unittest ParserTests.test Coverage Results" MODIFIED="1470402114002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
@@ -38,26 +33,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="parser.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parser.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="62" />
+            <state relative-caret-position="210">
+              <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#2036#3064#0" expanded="false" />
-                <element signature="e#3327#4595#0" expanded="false" />
-                <element signature="e#3705#3803#1" expanded="false" />
-                <element signature="e#3813#3880#0" expanded="false" />
-                <element signature="e#4024#4176#0" expanded="false" />
-                <element signature="e#4281#4328#0" expanded="false" />
-                <element signature="e#4458#4565#0" expanded="false" />
-                <element signature="e#4642#4679#1" expanded="false" />
-                <element signature="e#5025#5140#0" expanded="false" />
-                <element signature="e#5191#5367#1" expanded="false" />
-                <element signature="e#5645#5819#0" expanded="false" />
-                <element signature="e#6179#6212#0" expanded="false" />
-                <element signature="e#8027#8096#1" expanded="false" />
+                <element signature="e#4456#4563#0" expanded="false" />
+                <element signature="e#4640#4677#1" expanded="false" />
+                <element signature="e#5023#5138#0" expanded="false" />
+                <element signature="e#5189#5365#1" expanded="false" />
+                <element signature="e#5643#5817#0" expanded="false" />
+                <element signature="e#6177#6210#0" expanded="false" />
+                <element signature="e#8025#8094#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -76,8 +65,8 @@
       <file leaf-file-name="pos_tagger.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/pos_tagger.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+            <state relative-caret-position="404">
+              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#1427#2312#0" expanded="false" />
@@ -88,36 +77,28 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="51">
-                <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+              <first_editor relative-caret-position="425">
+                <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
                 <folding />
               </first_editor>
               <second_editor />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+          <provider editor-type-id="MarkdownFxPreviewEditor">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser_tests.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parser_tests.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/parser_tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="34">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -154,10 +135,10 @@
         <option value="$PROJECT_DIR$/models/parser.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/utils/enums.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/ParserTests.py" />
-        <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/tests/parser_tests.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/parser.py" />
       </list>
     </option>
   </component>
@@ -230,10 +211,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="word_normalizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="word_normalizer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -254,7 +249,7 @@
       <recent name="C:\DEV\Python\word-normalizer" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittest ParserTests.test">
+  <component name="RunManager" selected="Python.parser (1)">
     <configuration default="false" name="parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -269,24 +264,6 @@
       <module name="word-normalizer" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="C:\DEV\Python\word-normalizer\parser.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="parser (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="word-normalizer" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -312,6 +289,24 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="parser (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="word_normalizer" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parser.py" />
+      <option name="PARAMETERS" value="&gt; test.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -524,13 +519,13 @@
     </configuration>
     <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.parser" />
-      <item index="1" class="java.lang.String" itemvalue="Python.parser (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest ParserTests.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest ParserTests.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.parser (1)" />
     </list>
     <recent_temporary>
       <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest ParserTests.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.parser (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.parser (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest ParserTests.test" />
         <item index="2" class="java.lang.String" itemvalue="Python.parser" />
       </list>
     </recent_temporary>
@@ -578,13 +573,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26332623" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -618,23 +613,85 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="230" selection-end-column="38" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#2036#3064#0" expanded="false" />
-            <element signature="e#3327#4595#0" expanded="false" />
-            <element signature="e#3705#3803#1" expanded="false" />
-            <element signature="e#3813#3880#0" expanded="false" />
-            <element signature="e#4024#4176#0" expanded="false" />
-            <element signature="e#4281#4328#0" expanded="false" />
-            <element signature="e#4458#4565#0" expanded="false" />
-            <element signature="e#4642#4679#1" expanded="false" />
-            <element signature="e#5025#5140#0" expanded="false" />
-            <element signature="e#5191#5367#1" expanded="false" />
-            <element signature="e#5645#5819#0" expanded="false" />
-            <element signature="e#6179#6212#0" expanded="false" />
-            <element signature="e#8027#8096#1" expanded="false" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/pos_tagger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1427#2312#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="425">
+            <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/parser_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -684,7 +741,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="230" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/enums.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/pos_tagger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1427#2312#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/parser_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -702,19 +837,13 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#2036#3064#0" expanded="false" />
-            <element signature="e#3327#4595#0" expanded="false" />
-            <element signature="e#3705#3803#1" expanded="false" />
-            <element signature="e#3813#3880#0" expanded="false" />
-            <element signature="e#4024#4176#0" expanded="false" />
-            <element signature="e#4281#4328#0" expanded="false" />
-            <element signature="e#4458#4565#0" expanded="false" />
-            <element signature="e#4642#4679#1" expanded="false" />
-            <element signature="e#5025#5140#0" expanded="false" />
-            <element signature="e#5191#5367#1" expanded="false" />
-            <element signature="e#5645#5819#0" expanded="false" />
-            <element signature="e#6179#6212#0" expanded="false" />
-            <element signature="e#8027#8096#1" expanded="false" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -758,19 +887,13 @@
           <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#2036#3064#0" expanded="false" />
-            <element signature="e#3327#4595#0" expanded="false" />
-            <element signature="e#3705#3803#1" expanded="false" />
-            <element signature="e#3813#3880#0" expanded="false" />
-            <element signature="e#4024#4176#0" expanded="false" />
-            <element signature="e#4281#4328#0" expanded="false" />
-            <element signature="e#4458#4565#0" expanded="false" />
-            <element signature="e#4642#4679#1" expanded="false" />
-            <element signature="e#5025#5140#0" expanded="false" />
-            <element signature="e#5191#5367#1" expanded="false" />
-            <element signature="e#5645#5819#0" expanded="false" />
-            <element signature="e#6179#6212#0" expanded="false" />
-            <element signature="e#8027#8096#1" expanded="false" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -838,17 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/pos_tagger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#1427#2312#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/constants.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -871,6 +983,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/parser_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -880,16 +1010,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="51">
-            <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          <first_editor relative-caret-position="425">
+            <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
@@ -899,42 +1029,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
+    <entry file="file://$PROJECT_DIR$/t.txt" />
+    <entry file="file://$PROJECT_DIR$/models/pos_tagger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="404">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#1427#2312#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="62" />
+        <state relative-caret-position="210">
+          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#2036#3064#0" expanded="false" />
-            <element signature="e#3327#4595#0" expanded="false" />
-            <element signature="e#3705#3803#1" expanded="false" />
-            <element signature="e#3813#3880#0" expanded="false" />
-            <element signature="e#4024#4176#0" expanded="false" />
-            <element signature="e#4281#4328#0" expanded="false" />
-            <element signature="e#4458#4565#0" expanded="false" />
-            <element signature="e#4642#4679#1" expanded="false" />
-            <element signature="e#5025#5140#0" expanded="false" />
-            <element signature="e#5191#5367#1" expanded="false" />
-            <element signature="e#5645#5819#0" expanded="false" />
-            <element signature="e#6179#6212#0" expanded="false" />
-            <element signature="e#8027#8096#1" expanded="false" />
+            <element signature="e#4456#4563#0" expanded="false" />
+            <element signature="e#4640#4677#1" expanded="false" />
+            <element signature="e#5023#5138#0" expanded="false" />
+            <element signature="e#5189#5365#1" expanded="false" />
+            <element signature="e#5643#5817#0" expanded="false" />
+            <element signature="e#6177#6210#0" expanded="false" />
+            <element signature="e#8025#8094#1" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/parser_tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>

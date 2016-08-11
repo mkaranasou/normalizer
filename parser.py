@@ -1,5 +1,7 @@
 import os
 import sys
+from math import log
+
 sys.path.extend([os.path.dirname(os.path.realpath(__file__))])
 
 import string
@@ -33,6 +35,10 @@ class Parser(object):
             self.pos_tagger = POSTagger(tags_to_keep, tags_to_remove)
         self.spell_checker = None
         self.abbreviations = None
+        # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
+        self._words = open(C.ROOT_PATH + 'data/words_by_frequency.txt').read().split()
+        self._wordcost = dict((k, log((i + 1) * log(len(self._words)))) for i, k in enumerate(self._words))
+        self._maxword = max(len(x) for x in self._words)
 
         if self.spellcheck:
             self.spell_checker = EnchantSpellChecker(DictTypeEnum.EN_US)
@@ -93,12 +99,6 @@ class Parser(object):
                 self.split_str_seq[self.split_str_seq.index(each)] = self.abbreviations[each]
 
     def _split_all_lower(self, word):
-        from math import log
-        # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
-        words = open("C:\\xampp\\htdocs\\MockDataGeneration\\mockdatageneration\\data\\words-by-frequency.txt").read().split()
-        wordcost = dict((k, log((i+1)*log(len(words)))) for i, k in enumerate(words))
-        maxword = max(len(x) for x in words)
-
         """Uses dynamic programming to infer the location of spaces in a string
         without spaces."""
 
@@ -106,8 +106,8 @@ class Parser(object):
         # been built for the i-1 first characters.
         # Returns a pair (match_cost, match_length).
         def best_match(i):
-            candidates = enumerate(reversed(cost[max(0, i-maxword):i]))
-            return min((c + wordcost.get(word[i-k-1:i], 9e999), k+1) for k, c in candidates)
+            candidates = enumerate(reversed(cost[max(0, i-self._maxword):i]))
+            return min((c + self._wordcost.get(word[i-k-1:i], 9e999), k+1) for k, c in candidates)
 
         # Build the cost array.
         cost = [0]

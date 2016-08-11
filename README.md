@@ -41,6 +41,7 @@ for nltk:
     
     print parser.normalize("ClientName")
     ['client', 'name']
+    
     print parser.normalize("Iscustomer")
     ['customer', 'is']
     
