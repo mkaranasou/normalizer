@@ -1,4 +1,5 @@
 #What is this module about
+Analyzing short, noisy data like class names and attributes, tweets and hashtags means that there is a need for normalization. This component attempts to combine several methods to normalize the aforementioned data. It focuses on word-level analysis (not a whole phrase that can be split in words by spaces but e.g. "SomeClient", "FistName", "lastName" etc) and uses regex, spellcheck, nlp and dynamic programming to try analyze the data and return a list of normalized words.
 
 #Installation
 This module requires Python 2.7+
