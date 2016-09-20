@@ -47,7 +47,7 @@ class Parser(object):
 
     def normalize(self, str_seq):
         if str_seq == "" or str_seq is None:
-            raise Exception("Even I can't normalize emptiness...")
+            raise Exception("Even I can't normalize empty...")
         self.str_seq = self._remove_non_ascii_chars(str_seq)
         return self._normalize_string()
 
@@ -94,6 +94,8 @@ class Parser(object):
         return abbrev
 
     def _deploy_abbreviations(self):
+        if len(self.abbreviations) == 0:  # so that user can change configuration using the same instance
+            self.abbreviations = self._load_abbreviations()
         for each in self.split_str_seq:
             if each in self.abbreviations:
                 self.split_str_seq[self.split_str_seq.index(each)] = self.abbreviations[each]
