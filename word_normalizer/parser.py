@@ -7,10 +7,10 @@ sys.path.extend([os.path.dirname(os.path.realpath(__file__))])
 import string
 from nltk import WordNetLemmatizer, re
 
-from models.pos_tagger import POSTagger
-from models.spell_checker import EnchantSpellChecker
-from utils.constants import C
-from utils.enums import DictTypeEnum
+from word_normalizer.models.pos_tagger import POSTagger
+from word_normalizer.models.spell_checker import EnchantSpellChecker
+from word_normalizer.utils.constants import C
+from word_normalizer.utils.enums import DictTypeEnum
 
 __author__ = 'm.karanasou'
 
@@ -22,8 +22,16 @@ class Parser(object):
     """
 
     """
-    def __init__(self, spellcheck=True, deploy_abbreviations=True, pos_tag=True, tags_to_keep=None, tags_to_remove=None):
-        self.spellcheck = spellcheck
+
+    def __init__(self,
+                 spell_check=True,
+                 deploy_abbreviations=True,
+                 pos_tag=True,
+                 tags_to_keep=None,
+                 tags_to_remove=None,
+                 empty_value=()
+                 ):
+        self.spellcheck = spell_check
         self.deploy_abbreviations = deploy_abbreviations
         self.str_seq = ""
         self.split_str_seq = None
@@ -33,21 +41,22 @@ class Parser(object):
         self.pos_tag = pos_tag
         if self.pos_tag:
             self.pos_tagger = POSTagger(tags_to_keep, tags_to_remove)
-        self.spell_checker = None
+        self.spell_checker = EnchantSpellChecker(DictTypeEnum.EN_US)
         self.abbreviations = None
         # Build a cost dictionary, assuming Zipf's law and cost = -math.log(probability).
         self._words = open(C.ROOT_PATH + 'data/words_by_frequency.txt').read().split()
         self._wordcost = dict((k, log((i + 1) * log(len(self._words)))) for i, k in enumerate(self._words))
         self._maxword = max(len(x) for x in self._words)
+        self.empty_value = empty_value
 
-        if self.spellcheck:
-            self.spell_checker = EnchantSpellChecker(DictTypeEnum.EN_US)
         if self.deploy_abbreviations:
             self.abbreviations = self._load_abbreviations()
 
     def normalize(self, str_seq):
         if str_seq == "" or str_seq is None:
-            raise Exception("Even I can't normalize empty...")
+            import warnings
+            warnings.warn("Empty input, there's nothing to do here..")
+            return self.empty_value
         self.str_seq = self._remove_non_ascii_chars(str_seq)
         return self._normalize_string()
 
@@ -207,7 +216,7 @@ class Parser(object):
             temp = temp_word.split(' ')
 
         if len(temp) == 1:
-            is_correct = self.spell_checker.is_correct(temp[0])
+            is_correct = self.spell_checker.is_correct(temp[0]) if temp[0] != '' else True
             # if len([c for c in temp[0] if c.islower()]) == len(temp[0]) or not is_correct:
             if temp[0].islower() or temp[0].isupper() or not is_correct:
                 all_lower = True
@@ -229,7 +238,7 @@ class Parser(object):
 
 
 if __name__ == "__main__":
-    parser = Parser(spellcheck=True, deploy_abbreviations=True)
+    parser = Parser(spell_check=True, deploy_abbreviations=True)
     print parser.normalize("somename")
     print parser.normalize("some_name")
     print parser.normalize("someName")
@@ -239,5 +248,6 @@ if __name__ == "__main__":
     print parser.normalize("ClientName")
     print parser.normalize("Iscustomer")
 
-    parser = Parser(spellcheck=True, deploy_abbreviations=False)
+    parser = Parser(spell_check=True, deploy_abbreviations=False)
     print parser.normalize("s123435somename")
+    print parser.normalize("")

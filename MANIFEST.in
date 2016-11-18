@@ -1,0 +1,3 @@
+include requirements.txt
+include LICENCE.txt
+recursive-include word_normalizer/data *

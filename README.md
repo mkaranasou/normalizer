@@ -3,7 +3,11 @@ Analyzing short, noisy data like class names and attributes, tweets and hashtags
 
 #Installation
 This module requires Python 2.7+
-
+   
+    pip install -U /path/to/word_normalizer/
+    
+    or 
+    
     cd /path/to/word-normalizer/
     pip install requirements.txt
 
