@@ -37,8 +37,9 @@ class POSTagger(object):
     def _filter_results(self):
         filtered = {}
         for k, v in self.result.items():
-            if k in self.tags_to_keep and k not in self.tags_to_remove:
+            if v in self.tags_to_keep and v not in self.tags_to_remove:
                 filtered[k] = v
+            # TODO: Add implementation so that the user can define only the tags_to_remove
         return filtered
 
     def _keep_nouns(self):
