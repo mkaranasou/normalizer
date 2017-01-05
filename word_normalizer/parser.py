@@ -75,7 +75,11 @@ class Parser(object):
 
         self._plurar_to_singular()
 
-        return self.proper_names
+        # remove empty
+        self.proper_names = [x for x in self.proper_names if x]
+
+        # return empty value if nothing left in proper_names
+        return self.proper_names if len(self.proper_names) > 0 else self.empty_value
 
     def _load_abbreviations(self):
         abbrev = {}
