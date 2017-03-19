@@ -1,23 +1,26 @@
-#What is this module about
+What is this module about
+---
 Analyzing short, noisy data like class names and attributes, tweets and hashtags means that there is a need for some kind of normalization. This component attempts to combine several methods to normalize the aforementioned kind of data. It focuses on word-level analysis (not a whole phrase that can be split in words by spaces but e.g. "SomeClient", "FistName", "lastName" etc) and uses regex, spellcheck, nlp and dynamic programming to try analyze the data and return a list of normalized words.
 
-#Installation
+Installation
+---
 This module requires Python 2.7+
-   
+   ```
     pip install -U /path/to/word_normalizer/
     
     or 
     
     cd /path/to/word-normalizer/
     pip install requirements.txt
-
+   ```
 for nltk:
-
+  ```python
     # open a python console
     import nltk
     nltk.download()
-    
-#Usage
+  ```  
+Usage
+---
 
 ```python
     parser = Parser(spellcheck=True, deploy_abbreviations=True)
